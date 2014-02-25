@@ -39,7 +39,7 @@ If you already have `fpm` installed and configured you may try skipping the boot
 
 ## OS of the build server
 
-It is recommended to run the RPM script [kafka-rpm-.sh](kafka-rpm.sh) on a RHEL OS family machine.
+It is recommended to run the RPM script [kafka-rpm.sh](kafka-rpm.sh) on a RHEL OS family machine.
 
 
 ## Target operating systems
