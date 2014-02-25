@@ -62,9 +62,9 @@ Syntax:
 
     $ ./kafka-rpm.sh <kafka-package-download-url>
 
-To find a direct download URL visit the [Kafka downloads](http://kafka.apache.org) page and click on the link to a Kafka
-binary release.  Note: Don't use the (mirror) link on the download page because that link will first take you to one of
-the Apache mirror sites.  Use one of the mirrors' direct links.
+To find a direct download URL visit the [Kafka downloads](http://kafka.apache.org/downloads.html) page and click on the
+link to a Kafka binary release.  Note: Don't use the (mirror) link on the download page because that link will first
+take you to one of the Apache mirror sites.  Use one of the mirrors' direct links.
 
 Example:
 
