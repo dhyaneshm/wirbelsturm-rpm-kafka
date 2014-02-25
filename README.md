@@ -72,7 +72,7 @@ Example:
 
     >>> Will create kafka-0.8.0.el6.x86_64.rpm
 
-This will create an RPM that will package all Kafka files and directories under the directory path `/opt/kafka/`.
+This will create an RPM that contains all Kafka files and directories under the directory path `/opt/kafka/`.
 
 
 <a name="verify"></a>
