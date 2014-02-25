@@ -70,6 +70,8 @@ Example:
 
     $ ./kafka-rpm.sh http://www.eu.apache.org/dist/kafka/0.8.0/kafka_2.8.0-0.8.0.tar.gz
 
+    >>> Will create kafka-0.8.0.el6.x86_64.rpm
+
 This will create an RPM that will package all Kafka files and directories under the directory path `/opt/kafka/`.
 
 
