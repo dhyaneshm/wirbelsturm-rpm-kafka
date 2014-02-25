@@ -96,7 +96,7 @@ change the root level directory to something other than `/opt/kafka/`, or modify
 
 <a name="contributing"></a>
 
-## Contributing to wirbelsturm-rpm-kafka
+# Contributing to wirbelsturm-rpm-kafka
 
 Code contributions, bug reports, feature requests etc. are all welcome.
 
@@ -106,7 +106,7 @@ to send patches and pull requests to wirbelsturm-rpm-kafka.
 
 <a name="license"></a>
 
-## License
+# License
 
 Copyright © 2014 Michael G. Noll
 
