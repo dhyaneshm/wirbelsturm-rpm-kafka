@@ -63,7 +63,7 @@ fpm -s dir -t rpm -a all \
     --maintainer "$MAINTAINER" \
     --vendor "Kafka Project" \
     --url http://kafka.apache.org \
-    --description "Distributed publish-subscribe messaging system (RPM built from release for Scala $SCALA_VERSION)" \
+    --description "A high-throughput distributed messaging system (RPM built from release for Scala $SCALA_VERSION)" \
     -p $OLD_PWD/kafka-VERSION.el6.ARCH.rpm \
     -a "x86_64" \
     --prefix $INSTALL_ROOT_DIR \
