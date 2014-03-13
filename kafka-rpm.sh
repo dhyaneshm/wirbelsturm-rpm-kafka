@@ -31,9 +31,10 @@ fi
 # http://www.us.apache.org/dist/kafka/0.8.0/kafka_2.8.0-0.8.0.tar.gz
 KAFKA_DOWNLOAD_URL="$1"
 KAFKA_TARBALL=`basename $KAFKA_DOWNLOAD_URL`
-KAFKA_VERSION=`echo $KAFKA_TARBALL | sed -r 's/^kafka_[0-9\.]+-(.*).tgz$/\1/'`
+SCALA_VERSION=`echo $KAFKA_TARBALL | sed -r 's/^kafka_([0-9\.]+)-(.*).tgz$/\1/'`
+KAFKA_VERSION=`echo $KAFKA_TARBALL | sed -r 's/^kafka_([0-9\.]+)-(.*).tgz$/\2/'`
 
-echo "Building an RPM for Kafka release version $KAFKA_VERSION..."
+echo "Creating an RPM for Kafka release version $KAFKA_VERSION, built for Scala $SCALA_VERSION..."
 
 # Prepare environment
 OLD_PWD=`pwd`
@@ -62,7 +63,7 @@ fpm -s dir -t rpm -a all \
     --maintainer "$MAINTAINER" \
     --vendor "Kafka Project" \
     --url http://kafka.apache.org \
-    --description "Distributed publish-subscribe messaging system" \
+    --description "Distributed publish-subscribe messaging system (RPM built from release for Scala $SCALA_VERSION)" \
     -p $OLD_PWD/kafka-VERSION.el6.ARCH.rpm \
     -a "x86_64" \
     --prefix $INSTALL_ROOT_DIR \
