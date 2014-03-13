@@ -20,7 +20,7 @@ function print_usage() {
   echo "Usage: $myself <kafka-package-download-url>"
   echo
   echo "Examples:"
-  echo "  \$ $myself http://www.eu.apache.org/dist/kafka/0.8.0/kafka_2.8.0-0.8.0.tar.gz"
+  echo "  \$ $myself http://www.eu.apache.org/dist/kafka/0.8.1/kafka_2.10-0.8.1.tgz"
 }
 
 if [ $# -ne 1 ]; then
@@ -31,7 +31,7 @@ fi
 # http://www.us.apache.org/dist/kafka/0.8.0/kafka_2.8.0-0.8.0.tar.gz
 KAFKA_DOWNLOAD_URL="$1"
 KAFKA_TARBALL=`basename $KAFKA_DOWNLOAD_URL`
-KAFKA_VERSION=`echo $KAFKA_TARBALL | sed -r 's/^kafka_[0-9\.]+-(.*).tar.gz$/\1/'`
+KAFKA_VERSION=`echo $KAFKA_TARBALL | sed -r 's/^kafka_[0-9\.]+-(.*).tgz$/\1/'`
 
 echo "Building an RPM for Kafka release version $KAFKA_VERSION..."
 
@@ -52,7 +52,7 @@ wget $KAFKA_DOWNLOAD_URL || cleanup_and_exit $?
 tar -xzf $KAFKA_TARBALL || cleanup_and_exit $?
 
 # Build the RPM
-KAFKA_DIR=${KAFKA_TARBALL%.tar.gz}
+KAFKA_DIR=${KAFKA_TARBALL%.tgz}
 cd $KAFKA_DIR
 # Fix permissions of shell scripts
 chmod 755 bin/*.sh
