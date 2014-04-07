@@ -60,6 +60,7 @@ chmod 755 bin/*.sh
 fpm -s dir -t rpm -a all \
     -n kafka \
     -v $KAFKA_VERSION \
+    --iteration "1.miguno" \
     --maintainer "$MAINTAINER" \
     --vendor "Kafka Project" \
     --url http://kafka.apache.org \
