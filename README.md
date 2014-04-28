@@ -20,6 +20,7 @@ Table of Contents
     * <a href="#configuration">Custom configuration</a>
 * <a href="#contributing">Contributing</a>
 * <a href="#license">License</a>
+* <a href="#references">References</a>
 
 ---
 
@@ -113,3 +114,10 @@ to send patches and pull requests to wirbelsturm-rpm-kafka.
 Copyright © 2014 Michael G. Noll
 
 See [LICENSE](LICENSE) for licensing information.
+
+
+<a name="references"></a>
+
+# References
+
+* [kafka-rpm](https://github.com/edwardcapriolo/kafka-rpm) -- RPM spec file for packaging Kafka 0.8+
